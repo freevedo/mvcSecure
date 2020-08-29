@@ -1,10 +1,24 @@
 <?php
-    require_once('views/View.php');
+    require_once('views/View.php');    
+    /**
+     * Router
+     * controlle tous les controlleurs et se charge dappeler le bon controleur
+     */
     class Router 
-    {
+    {        
+        /**
+         * _ctrl
+         * _view
+         * @var mixed
+         */
         private $_ctrl;
         private $_view;
-
+        
+        /**
+         * routeReq
+         *
+         * @return void
+         */
         public function routeReq()
         {
             try

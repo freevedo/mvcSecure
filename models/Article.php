@@ -1,15 +1,37 @@
 <?php 
+
+   /** */    
+    /**
+     * Article
+     */
     class Article 
-    {
+    {        
+        /**
+         * _id
+         * _tit
+         * @var mixed
+         */
         private $_id;
         private $_title;
         private $_content;
-
+        
+        /**
+         * __construct
+         *
+         * @param  mixed $data
+         * @return void
+         */
         public function __construct(array $data)
         {
             $this->hydrate($data);
         }
-
+        
+        /**
+         * hydrate
+         *
+         * @param  mixed $data
+         * @return void
+         */
         public function hydrate(array $data)
         {
             foreach($data as $key => $value)
@@ -22,7 +44,13 @@
         }
 
         //SETTERS
-
+        
+        /**
+         * setId
+         *
+         * @param  mixed $id
+         * @return void
+         */
         public function setId($id)
         {
             $id = (int) $id;
@@ -41,15 +69,30 @@
         }
 
         //GETTERS
-
+        
+        /**
+         * getId
+         *
+         * @return void
+         */
         public function getId()
         {
             return $this->_id;
-        }
+        }        
+        /**
+         * getTitle
+         *
+         * @return void
+         */
         public function getTitle()
         {
             return $this->_title;
-        }
+        }        
+        /**
+         * getContent
+         *
+         * @return void
+         */
         public function getContent()
         {
             return $this->_content;
